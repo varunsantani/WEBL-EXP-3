@@ -1,0 +1,118 @@
+/* =====================
+   Global Styles
+   ===================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #eef3f9; /* pastel blue background */
+    color: #2e2e2e;
+}
+
+/* =====================
+   Header Section
+   ===================== */
+.header {
+    background-color: #4a6fa5; /* muted navy blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.designation {
+    margin-top: 8px;
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.95;
+}
+
+/* =====================
+   Profile Section
+   ===================== */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.profile-img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    border: 5px solid #4a6fa5;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+.profile-text {
+    max-width: 680px;
+}
+
+/* =====================
+   Cards / Sections
+   ===================== */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 25px 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   Headings
+   ===================== */
+h2 {
+    font-size: 22px;
+    color: #3b5f8a;
+    margin-bottom: 12px;
+}
+
+/* =====================
+   Lists
+   ===================== */
+ul {
+    padding-left: 22px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* =====================
+   Paragraphs
+   ===================== */
+p {
+    line-height: 1.7;
+    font-size: 15.5px;
+}
+
+/* =====================
+   Footer
+   ===================== */
+.footer {
+    background-color: #2f4f7f; /* darker blue for contrast */
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 12px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

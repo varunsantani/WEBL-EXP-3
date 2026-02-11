@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Varun Santani | Portfolio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS (Same as Practical 1) -->
+    <style>
+        h2 {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: #3e3e3e;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #d6d1c4;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 14px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Varun Santani</h1>
+        <p class="designation">IT Engineer | Programmer | Cybersecurity Enthusiast</p>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile">
+        <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+
+        <div class="profile-text">
+            <p style="font-size: 16px; color: #555; line-height: 1.6;">
+                I am an IT Engineer with strong foundations in programming and
+                problem-solving. My expertise includes C, C++, Java, Python,
+                Cybersecurity, and Web Development. I enjoy learning new
+                technologies and building secure, efficient, and scalable solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hobbies -->
+    <div class="card">
+        <h2>Hobbies</h2>
+        <ul id="hobbyList">
+            <li>Exploring new programming tools and frameworks</li>
+            <li>Solving coding challenges and logic problems</li>
+            <li>Reading about cybersecurity trends</li>
+            <li>Tech blogging and self-learning</li>
+        </ul>
+
+        <button onclick="addHobby()">Add Hobby</button>
+        <button onclick="removeHobby()">Remove Last Hobby</button>
+    </div>
+
+    <!-- Passion -->
+    <div class="card">
+        <h2>Passion</h2>
+        <p id="passionText">
+            I am passionate about software development and cybersecurity,
+            particularly building applications that are both user-friendly
+            and secure. I strive to continuously enhance my technical skills
+            and stay updated with emerging technologies.
+        </p>
+
+        <button onclick="changePassion()">Change Passion Text</button>
+    </div>
+
+    <!-- Background Color Change -->
+    <div class="card">
+        <h2>Change Background</h2>
+        <button onclick="changeColor('#eef3f9')">Default</button>
+        <button onclick="changeColor('#dff6ff')">Light Blue</button>
+        <button onclick="changeColor('#e6ffe6')">Light Green</button>
+        <button onclick="changeColor('#ffe6f0')">Light Pink</button>
+    </div>
+
+    <!-- Past Work -->
+    <div class="card">
+        <h2>Past Work</h2>
+        <p>
+            Worked on academic and personal projects involving programming
+            in C, C++, Java, and Python. Developed web-based applications
+            and explored cybersecurity concepts such as network security
+            and ethical hacking fundamentals.
+        </p>
+    </div>
+
+    <!-- Social Life -->
+    <div class="card">
+        <h2>Social Life</h2>
+        <p>
+            An active learner and team-oriented individual who enjoys
+            collaborating with peers, participating in technical discussions,
+            and sharing knowledge within the developer community.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            Connect with me:
+            <a href="https://github.com/varunsantani">GitHub</a> |
+            <a href="#">LinkedIn</a> |
+            <a href="mailto:2024.varun.santani@ves.ac.in">Email</a>
+        </p>
+    </footer>
+
+    <!-- =====================
+         DOM JavaScript
+         ===================== -->
+    <script>
+
+        // 1️⃣ Change Passion Text
+        function changePassion() {
+            document.getElementById("passionText").innerHTML =
+                "I am deeply interested in full-stack development and advanced cybersecurity. My goal is to build secure, scalable and innovative software solutions.";
+        }
+
+        // 2️⃣ Add New Hobby
+        function addHobby() {
+            let list = document.getElementById("hobbyList");
+            let newItem = document.createElement("li");
+            newItem.textContent = "Building Real-World Projects";
+            list.appendChild(newItem);
+        }
+
+        // 3️⃣ Remove Last Hobby
+        function removeHobby() {
+            let list = document.getElementById("hobbyList");
+            if (list.lastElementChild) {
+                list.removeChild(list.lastElementChild);
+            }
+        }
+
+        // 4️⃣ Change Background Color
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+
+</body>
+</html>
